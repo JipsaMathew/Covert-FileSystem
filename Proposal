@@ -1,30 +1,27 @@
                   A Web based Covert File System
 
 Overview:
-This project implements a web based covert FUSE filesystem (CovertFS) for users to backup, store and share their files in Flickr images without the knowledge of their service providers. This project is being developed as required by COSC 5399.  
+This project implements a web based covert filesystem (CovertFS) for users to backup, store and share their files in Flickr images. The files are viewed and accessed on local machine using File System in User Space (FUSE). This project is being developed as required by COSC 5399.  
 
 Functionality:
 1)	User has to create a valid account in Flickr.
-2)	To access the hidden file system in Flickr, a user has to mount it at a desired mount point in the local file system.
-		a.	During the mount, provide proper authorization details- Flickr url, account name and password for the account where users file system is hosted.
-		b.	The passphrase for encryption/decryption of the file system contents.
+2)	To access the hidden file system in Flickr, a user has to mount it at a desired mount point as a FUSE file system in the local machine.
+		a.	During the mount, provide proper authorization details- Flickr url, account name and password for the account where covert file system is hosted.
 3)	Verify authorization details and mount the file system.
-4)	Store photos containing the hidden file system metadata in a local image cache.
+
 
 Technical Specifications:
 Implementation
-Programming Language: Python V3
+Programming Language: Python
 OS: Linux
 Version Control: Git
 
 Milestones:
 1.	FUSE Module
-	Create a FUSE filesystem FlickrFS.
+	Write a program passthrough.py which would replicate covert filesystem on Flickr to local mountpoint.
 
 2.	Steganography Implementation
 	Use LSB (or any other algorithm) algorithm to store the information inside images in Flickr (https://www.flickr.com/)
-
-3.	
 
 References:
 A Web based Covert File System, Arati Baliga, Joe Kilian and Liviu Iftode
